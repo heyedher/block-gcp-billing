@@ -1,4 +1,5 @@
 include: "/views/*.view"
+# include: "/views/new_schema/gcp_billing_export.view.lkml"
 
 explore: gcp_billing_export {
   view_label: "GCP Billing"
