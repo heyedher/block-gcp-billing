@@ -16,11 +16,9 @@ view: +gcp_billing_export {
   }
 
   measure: cost_before_credits {
-    # Updated description to warn users about List Price behavior
     description: "The cost associated to an SKU. Note: Under the new CUD model, this reflects LIST PRICE for committed usage."
   }
 
-# NEW MEASURE FOR CLARITY
   measure: total_list_cost {
     description: "The total gross cost before any credits or discounts are applied."
     type: sum
@@ -28,11 +26,9 @@ view: +gcp_billing_export {
     value_format_name: usd
   }
 
-# VERIFICATION OF TOTAL COST
   measure: total_cost {
     description: "The Net Cost. Includes: Usage Cost (List) + CUD Fees - CUD Offsets - Discounts."
     type: number
-    # This logic holds true ONLY if gcp_billing_export_credits includes ALL credit types, which is our case for this block
     sql: ${cost_before_credits} + ${gcp_billing_export_credits.total_credit} ;;
     value_format_name: decimal_2
   }
