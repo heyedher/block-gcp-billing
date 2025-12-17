@@ -1,7 +1,7 @@
 include: "/views/*.view"
 
 
-# Uncoment this line if you are using the new schema described here
+# Uncomment this line if you are using the new schema described here
 # this will add new fields into Billing Export Explore
 
 # include: "/new_schema/**.view"

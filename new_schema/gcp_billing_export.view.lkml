@@ -20,15 +20,13 @@ view: +gcp_billing_export {
     description: "The cost associated to an SKU. Note: Under the new CUD model, this reflects LIST PRICE for committed usage."
   }
 
-# NEW MEASURE FOR CLARITY
   measure: total_list_cost {
     description: "The total gross cost before any credits or discounts are applied."
     type: sum
     sql: ${TABLE}.cost ;;
     value_format_name: usd
   }
-
-# VERIFICATION OF TOTAL COST
+  
   measure: total_cost {
     description: "The Net Cost. Includes: Usage Cost (List) + CUD Fees - CUD Offsets - Discounts."
     type: number
