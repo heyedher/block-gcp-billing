@@ -37,6 +37,8 @@ Note: Recently the GCP Billing Export moved from Beta to v1. If you activated th
 
 This block supports both the legacy billing schema and the new **CUDs Multiprice Data Model** (Proportional Attribution) using LookML Refinements.
 
+Reference [Cloud Billing export to BigQuery](https://docs.cloud.google.com/docs/cuds-multiprice-datamodel#export-bigquery)
+
 * **Legacy Schema (Default):** The block is configured by default to work with the legacy schema. No changes are needed if you haven't migrated yet.
 * **New Schema:** If your organization uses the new CUD model, you must apply the necessary field updates. To do this, open the main explore file and **uncomment** the following line:
 
