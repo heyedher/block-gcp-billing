@@ -40,7 +40,7 @@ This block supports both the legacy billing schema and the new **CUDs Multiprice
 Reference [Cloud Billing export to BigQuery](https://docs.cloud.google.com/docs/cuds-multiprice-datamodel#export-bigquery)
 
 * **Legacy Schema (Default):** The block is configured by default to work with the legacy schema. No changes are needed if you haven't migrated yet.
-* **New Schema:** If your organization uses the new CUD model, you must apply the necessary field updates. To do this, open the main explore file and **uncomment** the following line:
+* **New Schema:** If your organization uses the new CUD model, you must apply the necessary field updates. To do this, open the `explores/gcp_billing_export.explore.lkml` file and **uncomment** the following line:
 
     ```lookml
     include: "/new_schema/**.view"
