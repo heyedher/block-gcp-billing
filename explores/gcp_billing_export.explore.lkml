@@ -1,11 +1,5 @@
 include: "/views/*.view"
 
-
-# Uncomment this line if you are using the new schema described here
-# this will add new fields into Billing Export Explore
-
-# include: "/new_schema/**.view"
-
 explore: gcp_billing_export {
   view_label: "GCP Billing"
   label: "GCP Billing"
